@@ -1,0 +1,41 @@
+# =====================
+# Site info
+# =====================
+title: Site
+email: mail@site.com
+description: Description
+lang: es
+logo: favicon.ico
+
+baseurl: ""
+url: ""
+google-analytics:
+
+# =====================
+# Serve settings
+# =====================
+source: src
+destination: build
+livereload: true
+
+compress_html:
+  ignore:
+    envs: ['']
+
+sass:
+  style: compressed
+  sass_dir: assets/css
+
+webp:
+  enabled: true
+  img_dir: ["/assets/img"]
+
+# =====================
+# Build settings
+# =====================
+defaults:
+  - scope:
+      type: pages
+    values:
+      layout: default
+      image:

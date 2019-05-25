@@ -1,0 +1,15 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% seo %}
+  <meta property="og:image:secure_url" itemprop="image" content="{{ site.url }}/{% if page.image %}{{ page.image }}{% else %}{{ site.logo }}{% endif %}"/>
+  <meta property="og:image" itemprop="image" content="{{ site.url }}/{% if page.image %}{{ page.image }}{% else %}{{ site.logo }}{% endif %}"/>
+
+  {% if site.google_analytics and jekyll.environment == 'production' %}
+    {% include google-analytics.html %}
+  {% endif %}
+
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+</head>
